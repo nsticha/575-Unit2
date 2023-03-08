@@ -305,8 +305,9 @@ function createLegend(attributes){
                 '-text" x="65" y="' +
                 textY +
                 '">' +
-                Math.round(dataStats[circles[i]] * 100) / 100 +
-                " visitors" +
+                Math.round(dataStats[circles[i]] * 100) / 100 
+                +
+                
                 "</text>";
 
         };
