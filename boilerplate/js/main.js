@@ -4,6 +4,7 @@ class PopupContent {
     constructor(properties, attribute) {
         this.properties = properties;
         this.attribute = attribute;
+        console.log(this.properties[attribute])
         this.year = attribute.split("_")[1];
         this.attendance = this.properties[attribute];
         this.formatted = "<p><b>National Park Unit:</b>" + this.properties.National_Park_Unit + "</p><p><b>Attendance in " + this.year + ":</b> " + this.attendance + " visitors</p>";
@@ -167,7 +168,7 @@ function updatePropSymbols(attribute){
 
     map.eachLayer(function(layer){
 
-        if (layer.feature && layer.feature.properties[attribute]){
+        if (layer.feature){
           // access feature properties
             var props = layer.feature.properties;
        // update each featire's radius based on new attribute values
@@ -175,8 +176,7 @@ function updatePropSymbols(attribute){
             layer.setRadius(radius)
             // adds National Park data to popup
             var popupContent = new PopupContent(props, attribute);
-
-            var year = attribute.split("_")[1];
+            //var year = attribute.split("_")[1];
            //popupContent += "<p><b>Attendance in " + year + ":</b> " + props[attribute] + " visitors</p>";
 
 
@@ -305,7 +305,7 @@ function createLegend(attributes){
                 '-text" x="65" y="' +
                 textY +
                 '">' +
-                Math.round(dataStats[circles[i]] * 100) / 100 
+                Math.round(dataStats[circles[i]] * 100/100)
                 +
                 
                 "</text>";

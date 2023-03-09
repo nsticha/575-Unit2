@@ -1,6 +1,7 @@
 body{
-    margin: 0;
-}
+        margin: 0;
+    }
+    
 #map{ 
     height: 600px;
     width: 100%;
@@ -9,7 +10,21 @@ body{
 .leaflet-popup-content p {
     margin: .1em 0;
 }
+.banner {
+background-color:  rgba(167, 214, 167, 0.8);
+text-align: center;
+padding: 2px;
+font-size: 18px;
+font-family: Georgia, 'Times New Roman', Times, serif;
 
+}
+.footer {
+    color:rgb(54, 180, 226) 1px ;
+    text-align: center;
+    padding: 2px;
+    font-size: 12px;
+    font-family: Georgia, 'Times New Roman', Times, serif;   
+}
 .sequence-control-container {
     width: 350px;
     height: 30px;
@@ -35,6 +50,7 @@ body{
 }
 
 
+
 #forward {
     float: right;
 }
@@ -51,6 +67,7 @@ body{
     padding: 10px;
     text-align: center;
     border: solid rgb(54, 180, 226) 1px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .legend-control-container p{
